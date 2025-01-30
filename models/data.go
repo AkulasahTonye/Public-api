@@ -6,20 +6,23 @@ import (
 
 type Data struct {
 	// struct tag
-	Email     string
-	DateTime  time.Time
-	GitHubUrl string
-	Backlink  string
+	Email            string
+	Current_datetime time.Time
+	Github_url       string
 }
 
-var data = []Data{}
-
-func (d Data) Save() {
-
-	// Later: add it to a database
-	data = append(data, d)
-}
+//var data = []Data{}
 
 func GetAllData() []Data {
+
+	currentTime := time.Now().UTC()
+
+	data := []Data{{
+		Email:            "akulasaht@gmail.com",
+		Current_datetime: currentTime,
+		Github_url:       "https://github.com/AkulasahTonye/API_Testing",
+	},
+	}
+
 	return data
 }

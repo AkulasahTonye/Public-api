@@ -1,4 +1,4 @@
-module github.com/Public-api
+module github.com/Public-API
 
 go 1.23.3
 

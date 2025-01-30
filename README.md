@@ -1,8 +1,12 @@
 # Public-api
 
-. This is a public Rest API that receives data
+. This is a public Rest API that returns a JSON format data
 
-. How to run this Project simply locate the Project in your terminal or cmd and type in go run dot(.)
+. To run the application locally, Git clone this repo: https://github.com/AkulasahTonye/Public-api.git
+and then run the following commands
 
-. I used a github.com/gin-gonic/gin Package For this project
+go install
+go run main.go
 
+API Endpoint: url
+Written in [Golang](https://hng.tech/hire/golang-developers)
