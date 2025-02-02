@@ -19,7 +19,7 @@ func main() {
 
 	server.GET("data", GetData)
 
-	server.Run("localhost:8080") // Localhost
+	server.Run("localhost:3000") // Creating a Localhost
 }
 
 func GetData(context *gin.Context) {
