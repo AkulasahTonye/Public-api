@@ -19,7 +19,7 @@ func main() {
 
 	server.GET("data", GetData)
 
-	server.Run("/") // Localhost
+	server.Run("localhost:3000") // Localhost
 }
 
 func GetData(context *gin.Context) {
@@ -27,16 +27,14 @@ func GetData(context *gin.Context) {
 	context.JSON(http.StatusOK, data)
 }
 
-func getAllData() []data {
+func getAllData() data {
 
 	currentTime := time.Now().UTC()
 
-	data := []data{{
+	data := data{
 		Email:           "akulasaht@gmail.com",
 		CurrentDatetime: currentTime,
 		GithubUrl:       "https://github.com/AkulasahTonye/API_Testing",
-	},
 	}
-
 	return data
 }
