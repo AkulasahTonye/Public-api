@@ -1,4 +1,4 @@
-GET http://localhost:4000/data
+GET http://localhost:8080/data
 content-type: application/json
 
 {
