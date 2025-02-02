@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -19,7 +20,13 @@ func main() {
 
 	server.GET("/", GetData)
 
-	server.Run("localhost:3000") // Creating a Localhost
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // Default to 8080 if not set
+	}
+
+	// Bind to 0.0.0.0 to allow external access
+	server.Run("0.0.0.0:" + port)
 }
 
 func GetData(context *gin.Context) {
