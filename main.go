@@ -17,9 +17,9 @@ func main() {
 	server := gin.Default()
 	getAllData()
 
-	server.GET("data", GetData)
+	server.GET("/", GetData)
 
-	server.Run("localhost:3000") // Localhost
+	server.Run("localhost:4000") // Localhost
 }
 
 func GetData(context *gin.Context) {
