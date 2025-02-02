@@ -3,7 +3,6 @@ content-type: application/json
 
 {
   "email": "akulasaht@gmail.com",
-  "dateTime": "2025-01-20T09:57:00.000Z",
-  "gitHub": "https://github.com/AkulasahTonye/API_Testing",
-  "backlink": "https://hng.tech/hire/golang-developers"
+  "current_dateTime": "2025-01-20T09:57:00.000Z",
+  "git_hub": "https://github.com/AkulasahTonye/API_Testing"
 }

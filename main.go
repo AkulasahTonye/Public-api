@@ -1,21 +1,42 @@
 package main
 
 import (
-	"github.com/Public-API/models"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"time"
 )
+
+type data struct {
+	// struct tag
+	Email           string    `json:"email"`
+	CurrentDatetime time.Time `json:"current_datetime"`
+	GithubUrl       string    `json:"github_url"`
+}
 
 func main() {
 	server := gin.Default()
+	getAllData()
 
-	server.GET("/", GetData)
-	//server.POST("/data", createData)
+	server.GET("data", GetData)
 
 	server.Run(":3000") // Localhost
 }
 
 func GetData(context *gin.Context) {
-	data := models.GetAllData()
+	data := getAllData()
 	context.JSON(http.StatusOK, data)
+}
+
+func getAllData() []data {
+
+	currentTime := time.Now().UTC()
+
+	data := []data{{
+		Email:           "akulasaht@gmail.com",
+		CurrentDatetime: currentTime,
+		GithubUrl:       "https://github.com/AkulasahTonye/API_Testing",
+	},
+	}
+
+	return data
 }
