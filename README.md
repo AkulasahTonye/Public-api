@@ -8,5 +8,5 @@ and then run the following commands
 go install
 go run main.go
 
-API Endpoint:
+API Endpoint: https://public-api-uqjw.onrender.com
 Written in [Golang](https://hng.tech/hire/golang-developers)
